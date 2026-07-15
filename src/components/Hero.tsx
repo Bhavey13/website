@@ -31,7 +31,7 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-orange tracking-wide uppercase mb-6 shadow-xl shadow-black/10"
             >
               <Sparkles className="w-3.5 h-3.5 text-brand-orange animate-pulse" />
-              Strategic Recruitment Partners
+              Talent Partners for Startups & GCCs
             </motion.div>
 
             {/* Main Title */}
@@ -42,31 +42,33 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
               className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-4"
             >
               <span className="bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-                Nvaraa Solutions
+                Building Teams That Shape Businesses.
               </span>
             </motion.h1>
 
-            {/* Tagline */}
+            {/* Tagline / Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="font-display text-xl sm:text-2xl font-semibold bg-gradient-to-r from-slate-100 to-brand-orange bg-clip-text text-transparent leading-snug mb-6"
             >
-              Building Exceptional Teams. Empowering Careers.
+              Helping Startups and Global Capability Centers (GCCs) build exceptional teams through strategic talent acquisition.
             </motion.p>
 
-            {/* Description */}
+            {/* Description / Supporting Text */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               className="font-sans text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mb-10"
             >
-              We help organizations recruit and retain world-class talent. Through our relationship-driven approach and specialized expertise in permanent staffing, executive search, and strategic hiring solutions, we ensure the right leaders and key professionals connect with the right companies—enabling businesses and careers to scale together.
+              Every company has a hiring strategy. Very few have a team-building strategy.
+              <br /><br />
+              At Nvaraa, we partner with startups and Global Capability Centers (GCCs) to build teams that become the foundation of long-term growth. Whether you're making your first hire or scaling rapidly, we combine strategic hiring with a boutique search approach to help you hire people who create lasting business impact.
             </motion.p>
 
-            {/* Call to Actions (No search button as requested) */}
+            {/* Call to Actions */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
@@ -78,7 +80,7 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                 className="inline-flex items-center justify-center gap-2 font-sans font-semibold text-base bg-brand-teal hover:bg-brand-teal-light text-white px-7 py-3.5 rounded-xl shadow-lg shadow-brand-teal/25 transition-all hover:translate-y-[-2px] cursor-pointer"
               >
                 <Mail className="w-5 h-5 text-brand-orange" />
-                Contact Us
+                Book a Discovery Call
               </button>
 
               <button
@@ -86,7 +88,7 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                 className="inline-flex items-center justify-center gap-2 font-sans font-semibold text-base bg-slate-900 border border-slate-700 hover:border-brand-orange hover:bg-slate-800 text-slate-100 px-7 py-3.5 rounded-xl transition-all hover:translate-y-[-2px] cursor-pointer"
               >
                 <Building2 className="w-5 h-5 text-brand-orange" />
-                Explore Our Services
+                Our Hiring Practices
               </button>
             </motion.div>
           </div>
@@ -105,7 +107,7 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                 {/* Micro tech indicators */}
                 <div className="flex justify-between items-center text-xs font-mono text-slate-500">
                   <span>FOUNDATION / CORE</span>
-                  <span>RECRUITMENT PLATFORM</span>
+                  <span>TALENT ACQUISITION FRAMEWORK</span>
                 </div>
 
                 {/* Main branding visual */}
@@ -115,8 +117,8 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                       01
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-slate-200">Foundational Hiring</h4>
-                      <p className="text-xs text-slate-400">Targeted talent mapping for direct early-stage setups</p>
+                      <h4 className="font-display font-bold text-slate-200">Founding Team Practice</h4>
+                      <p className="text-xs text-slate-400">Targeted boutique search for early-stage setups</p>
                     </div>
                   </div>
 
@@ -125,8 +127,8 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                       02
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-slate-200">Consultative Process</h4>
-                      <p className="text-xs text-slate-400">Aligning functional nodes with technical blueprints</p>
+                      <h4 className="font-display font-bold text-slate-200">Strategic Assessment</h4>
+                      <p className="text-xs text-slate-400">Thoughtful evaluation of Vision-Culture fit</p>
                     </div>
                   </div>
 
@@ -135,8 +137,8 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                       03
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-slate-200">Joining Support</h4>
-                      <p className="text-xs text-slate-400">Managing notices and strategic client alignments</p>
+                      <h4 className="font-display font-bold text-slate-200 font-sans">Growth Hiring Practice</h4>
+                      <p className="text-xs text-slate-400">Consistent expansion without quality compromise</p>
                     </div>
                   </div>
                 </div>
@@ -145,7 +147,7 @@ export default function Hero({ onHireClick, onExploreServicesClick }: HeroProps)
                 <div className="flex justify-between items-center bg-slate-900/50 rounded-xl p-4 border border-slate-900">
                   <div className="flex items-center gap-3">
                     <div className="w-2.5 h-2.5 rounded-full bg-brand-orange animate-ping" />
-                    <span className="font-sans text-xs font-medium text-slate-400">Recruitment Specialists Active</span>
+                    <span className="font-sans text-xs font-medium text-slate-400">Hiring Partners Active</span>
                   </div>
                 </div>
 

@@ -6,7 +6,7 @@ export interface JobRequirementSubmission {
   contactName: string;
   email: string;
   phone: string;
-  roleType: RoleType;
+  roleType: string;
   requirementsSummary: string;
   submittedAt: string;
   status: 'Pending' | 'Reviewing' | 'Contacted' | 'Sourcing';
@@ -46,3 +46,6 @@ export interface Testimonial {
   feedback: string;
   avatar: string;
 }
+
+
+

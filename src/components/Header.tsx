@@ -24,10 +24,10 @@ export default function Header({ onExploreClick, onHireClick }: HeaderProps) {
   }, []);
 
   const menuItems = [
-    { label: 'About Us', href: '#about' },
-    { label: 'Services', href: '#services' },
+    { label: 'Who We Are', href: '#about' },
+    { label: 'Hiring Practices', href: '#services' },
     { label: 'Why Nvaraa', href: '#why-us' },
-    { label: 'Our Process', href: '#process' },
+    { label: 'Hiring Framework', href: '#process' },
     { label: 'Contact', href: '#contact' }
   ];
 
@@ -82,7 +82,7 @@ export default function Header({ onExploreClick, onHireClick }: HeaderProps) {
               onClick={onExploreClick}
               className="font-sans font-medium text-sm text-slate-700 hover:text-brand-orange px-4 py-2 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal rounded-md cursor-pointer"
             >
-              Our Services
+              Hiring Practices
             </button>
             <button
               onClick={onHireClick}
@@ -127,7 +127,7 @@ export default function Header({ onExploreClick, onHireClick }: HeaderProps) {
                 }}
                 className="w-full text-center font-sans font-medium text-slate-700 hover:text-brand-orange py-2 transition-colors border border-slate-200 rounded-lg cursor-pointer"
               >
-                Our Services
+                Hiring Practices
               </button>
               <button
                 onClick={() => {

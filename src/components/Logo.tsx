@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import logoImg from '../assets/logo.png';
 
 interface LogoProps {
   className?: string; // Tailwind height/style class for alignment
@@ -6,109 +7,90 @@ interface LogoProps {
   lightText?: boolean;
 }
 
+// Global cache to avoid re-processing the image on every component mount
+const logoCache: Record<string, string> = {};
+
 export default function Logo({ className = 'h-10', iconOnly = false, lightText = false }: LogoProps) {
-  // Brand Colors matching the uploaded corporate identity precisely
-  const darkTeal = lightText ? '#e2f1f3' : '#0B3B46'; // Deep premium corporate pine/teal from the uploaded image
-  const brightCyan = lightText ? '#38bdf8' : '#14b8a6'; // High-contrast rising cyan arrow accent
-  const vibrantOrange = '#e37213'; // High-contrast success orange / gold
-  const primaryTextColor = lightText ? '#ffffff' : '#0B3B46';
-  const secondaryTextColor = lightText ? '#38bdf8' : '#e37213';
+  const [processedSrc, setProcessedSrc] = useState<string>('');
 
-  // Crisp, symmetrical vector SVG mark of the "N" with the diagonal progress bars and cyan breakout arrow
-  const logoIcon = (
-    <svg
-      className={`${iconOnly ? className : 'h-10 w-10'} shrink-0`}
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* 1. Left Vertical Pillar of N */}
-      <rect
-        x="20"
-        y="20"
-        width="12"
-        height="60"
-        rx="3.5"
-        fill={darkTeal}
-      />
+  useEffect(() => {
+    const cacheKey = `${lightText ? 'light' : 'dark'}`;
+    if (logoCache[cacheKey]) {
+      setProcessedSrc(logoCache[cacheKey]);
+      return;
+    }
 
-      {/* 2. Right Vertical Pillar of N */}
-      <rect
-        x="68"
-        y="20"
-        width="12"
-        height="60"
-        rx="3.5"
-        fill={darkTeal}
-      />
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = logoImg;
+    
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) {
+        setProcessedSrc(logoImg);
+        return;
+      }
 
-      {/* 3. Segmented Diagonal Success Path in Vibrant Orange (Three perfectly aligned rounded squares rotated at 45 degrees) */}
-      <rect
-        x="32"
-        y="62"
-        width="10"
-        height="10"
-        rx="2.5"
-        transform="rotate(-45 32 62)"
-        fill={vibrantOrange}
-      />
-      <rect
-        x="45"
-        y="49"
-        width="10"
-        height="10"
-        rx="2.5"
-        transform="rotate(-45 45 49)"
-        fill={vibrantOrange}
-      />
-      <rect
-        x="58"
-        y="36"
-        width="10"
-        height="10"
-        rx="2.5"
-        transform="rotate(-45 58 36)"
-        fill={vibrantOrange}
-      />
+      ctx.drawImage(img, 0, 0);
+      const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imgData.data;
 
-      {/* 4. Rising Success Arrow in Bright Cyan */}
-      <path
-        d="M 64 26 L 76 14"
-        stroke={brightCyan}
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M 66 14 L 76 14 L 76 24"
-        stroke={brightCyan}
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
 
-  if (iconOnly) {
-    return logoIcon;
-  }
+        // 1. Detect white background pixels and make them transparent
+        // Using the minimum of RGB to calculate "whiteness"
+        const whiteness = Math.min(r, g, b);
+        if (whiteness > 215) {
+          // Smooth anti-aliasing feathering for edge pixels
+          const alphaFactor = (255 - whiteness) / (255 - 215);
+          data[i + 3] = Math.round(data[i + 3] * alphaFactor);
+        } else if (lightText) {
+          // 2. For dark backgrounds (lightText=true), adapt the dark navy symbol to light-slate/white
+          // The dark navy pixels have low Red values (typically < 100)
+          if (r < 100) {
+            data[i] = 241;     // Red (slate-100)
+            data[i + 1] = 245; // Green
+            data[i + 2] = 249; // Blue
+          }
+        }
+      }
+
+      ctx.putImageData(imgData, 0, 0);
+      const dataUrl = canvas.toDataURL('image/png');
+      logoCache[cacheKey] = dataUrl;
+      setProcessedSrc(dataUrl);
+    };
+
+    img.onerror = () => {
+      setProcessedSrc(logoImg);
+    };
+  }, [lightText]);
+
+  // Fallback behavior:
+  // - If lightText is true, we must hide the original image to avoid displaying the white background on dark backgrounds.
+  // - If lightText is false, we can safely display the original image immediately with CSS mixBlendMode: multiply.
+  const displaySrc = processedSrc || logoImg;
+  const isReady = !!processedSrc;
+  const showImage = !lightText || isReady;
 
   return (
-    <div className={`flex items-center select-none gap-3 ${className}`}>
-      {logoIcon}
-      <div className="flex flex-col justify-center">
-        <span
-          className="font-sans font-extrabold text-xl leading-none tracking-[0.16em]"
-          style={{ color: primaryTextColor }}
-        >
-          NVARAA
-        </span>
-        <span
-          className="font-sans font-bold text-[8.5px] tracking-[0.44em] mt-1.5 uppercase"
-          style={{ color: secondaryTextColor }}
-        >
-          SOLUTIONS
-        </span>
-      </div>
+    <div className={`flex items-center select-none ${className}`}>
+      <img
+        src={displaySrc}
+        alt="Nvaraa Logo"
+        referrerPolicy="no-referrer"
+        className={`h-full w-auto object-contain transition-opacity duration-300 ${showImage ? 'opacity-100' : 'opacity-0'}`}
+        style={{
+          // Use mixBlendMode: multiply as an instant, perfect CSS fallback for light backgrounds
+          mixBlendMode: !isReady && !lightText ? 'multiply' : 'normal'
+        }}
+      />
     </div>
   );
 }

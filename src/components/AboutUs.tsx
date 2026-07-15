@@ -20,8 +20,8 @@ export default function AboutUs() {
                     <Target className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-slate-900 mb-1">Tailored Talent Sourcing</h4>
-                    <p className="font-sans text-sm text-slate-600">Identifying exceptional professionals and self-starters who align with your organizational goals.</p>
+                    <h4 className="font-display font-bold text-slate-900 mb-1">Strategic Alignment</h4>
+                    <p className="font-sans text-sm text-slate-600">Working as an extension of your leadership to understand your business objectives first.</p>
                   </div>
                 </div>
               </div>
@@ -32,8 +32,8 @@ export default function AboutUs() {
                     <Users2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-slate-900 mb-1">Relationship Driven</h4>
-                    <p className="font-sans text-sm text-slate-600">Connecting candidates' life goals with long-term client milestones.</p>
+                    <h4 className="font-display font-bold text-slate-900 mb-1">Boutique Search</h4>
+                    <p className="font-sans text-sm text-slate-600">Thoughtful, relationship-driven talent assessment focusing on vision and culture fit.</p>
                   </div>
                 </div>
               </div>
@@ -44,8 +44,8 @@ export default function AboutUs() {
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-slate-900 mb-1">Strategic Integration</h4>
-                    <p className="font-sans text-sm text-slate-600">Operational cooperation representing your business as dynamic hiring partners.</p>
+                    <h4 className="font-display font-bold text-slate-900 mb-1">Building Capability</h4>
+                    <p className="font-sans text-sm text-slate-600">Adding key individuals who define, execute, scale, and influence future hiring positively.</p>
                   </div>
                 </div>
               </div>
@@ -54,24 +54,28 @@ export default function AboutUs() {
 
           {/* Core Content Block */}
           <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center animate-fade-in">
-            <span className="font-sans font-bold text-xs tracking-widest text-[#f37a1b] uppercase mb-3">
-              ABOUT US
+            <span className="block font-sans font-bold text-xs tracking-widest text-[#f37a1b] uppercase mb-3">
+              Who We Are
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
-              Recruitment Beyond Resumes
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug mb-6">
+              Recruitment Is Easy. Building Teams Isn't.
             </h2>
             
             <div className="space-y-6 text-slate-600 font-sans text-base sm:text-lg leading-relaxed">
               <p className="font-medium text-slate-800 border-l-4 border-brand-orange pl-4 py-1 italic bg-brand-orange/5 rounded-r-lg">
-                At Nvaraa Solutions, we believe successful hiring is about more than matching skills with job descriptions. We focus on understanding both client requirements and candidate aspirations to create meaningful professional connections.
+                Hiring isn't about filling vacancies — it's about building capability.
               </p>
               
               <p>
-                Our recruitment specialists work closely with organizations to identify, attract, and secure top talent across diverse business functions. Through a consultative and personalized approach, we deliver hiring solutions that support long-term success for both employers and candidates.
+                The right people influence culture, execution, customer experience, and the pace at which a business grows. That's why we don't begin with a job description; we begin with understanding your business.
+              </p>
+              
+              <p>
+                At Nvaraa, we work as an extension of your leadership team, taking the time to understand your vision, culture, growth plans, and hiring priorities before initiating any search.
               </p>
               
               <p className="text-base text-slate-500">
-                Whether you need specialized leadership, permanent technical nodes, or versatile corporate specialists, we structure tailored sourcing pipelines. By treating your corporate ambitions with the highest level of professionalism, we fulfill critical recruitment milestones.
+                Our approach is thoughtful, relationship-driven, and built around one objective — helping you build exceptional teams.
               </p>
             </div>
           </div>

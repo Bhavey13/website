@@ -111,7 +111,7 @@ export const clientSuccessStories: Testimonial[] = [
     name: 'Rohan Deshmukh',
     designation: 'VP of Technology',
     company: 'ScribeFlow Innovations',
-    feedback: 'Nvaraa Solutions did an outstanding job filling our technical architecture roles. They delivered candidates that matched our tech stack and culture, cutting our time-to-hire by almost 40%.',
+    feedback: 'Nvaraa did an outstanding job filling our technical architecture roles. They delivered candidates that matched our tech stack and culture, cutting our time-to-hire by almost 40%.',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
   },
   {

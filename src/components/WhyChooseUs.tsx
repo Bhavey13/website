@@ -1,35 +1,35 @@
 import React from 'react';
-import { BookOpen, CheckSquare, Zap, Sliders, Handshake } from 'lucide-react';
+import { Compass, Sliders, Users2, ShieldCheck, Handshake } from 'lucide-react';
 
 export default function WhyChooseUs() {
   const points = [
     {
-      title: 'Industry Knowledge',
-      desc: 'Strong understanding of hiring trends and talen acquisition best practices.',
-      icon: BookOpen,
+      title: 'Founder-Led Thinking',
+      desc: 'We understand that every early hire influences culture, execution, and long-term growth.',
+      icon: Compass,
       color: 'bg-brand-teal/5 border-brand-teal/10 text-brand-teal'
     },
     {
-      title: 'Quality-Driven Hiring',
-      desc: 'Comprehensive screening and evaluation processes to identify the right candidates.',
-      icon: CheckSquare,
+      title: 'Boutique Search',
+      desc: 'Every assignment is executed through a focused, high-touch search strategy rather than a volume-driven recruitment model.',
+      icon: Sliders,
       color: 'bg-emerald-50 border-emerald-100 text-emerald-600'
     },
     {
-      title: 'Faster Recruitment',
-      desc: 'Efficient sourcing and selection strategies that reduce hiring timelines.',
-      icon: Zap,
+      title: 'Strategic Candidate Positioning',
+      desc: 'We communicate your vision, leadership philosophy, business goals, and long-term opportunity to engage exceptional talent.',
+      icon: Users2,
       color: 'bg-brand-orange/5 border-brand-orange/10 text-brand-orange'
     },
     {
-      title: 'Tailored Solutions',
-      desc: 'Customized recruitment approaches designed around each client\'s unique needs.',
-      icon: Sliders,
+      title: 'Quality Over Quantity',
+      desc: 'We deliver curated shortlists instead of overwhelming volumes of resumes.',
+      icon: ShieldCheck,
       color: 'bg-brand-teal/5 border-brand-teal/10 text-brand-teal'
     },
     {
-      title: 'Long-Term Partnerships',
-      desc: 'Focused on building lasting relationships with clients and candidates alike.',
+      title: 'Relationship-Driven Partnerships',
+      desc: 'We become long-term hiring partners as your business continues to grow.',
       icon: Handshake,
       color: 'bg-rose-50 border-[2px] border-rose-100/50 text-rose-600'
     }
@@ -42,18 +42,24 @@ export default function WhyChooseUs() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid lg:grid-cols-12 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-12 gap-12 items-start mb-16">
           <div className="lg:col-span-6">
-            <span className="font-sans font-bold text-xs tracking-widest text-brand-teal uppercase">
+            <span className="font-sans font-bold text-xs tracking-widest text-[#f37a1b] uppercase">
               THE NVARAA ADVANTAGE
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-none mt-3 mb-4">
-              Why Strategic Leaders Partner With Us
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug mt-3 mb-4">
+              Experience That Goes Beyond Recruitment
             </h2>
           </div>
-          <div className="lg:col-span-6">
-            <p className="font-sans text-base sm:text-lg text-slate-600 leading-relaxed">
-              We look beyond skill codes and title matches. Our framework is engineered to align commercial trajectories and create teams that foster high efficiency and high stability.
+          <div className="lg:col-span-6 text-slate-600 font-sans text-base sm:text-lg leading-relaxed space-y-4">
+            <p>
+              Our founders have successfully partnered with multiple organizations to build teams from the ground up.
+            </p>
+            <p>
+              Over the past several years, we've helped six companies grow from their first hires to teams of 30+ professionals, supporting founders through one of the most critical phases of business growth.
+            </p>
+            <p>
+              Having worked closely with leadership teams during these journeys, we understand that early hiring decisions shape the future of an organization. That experience influences every search we undertake.
             </p>
           </div>
         </div>
@@ -61,7 +67,7 @@ export default function WhyChooseUs() {
         {/* Bento-like asymmetrical grid wrapper */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           
-          {/* Card 1: Larger featured item */}
+          {/* Card 1: Founder-Led Thinking (Slate-950 Dark bg) */}
           <div className="lg:col-span-2 group relative p-8 rounded-2xl bg-slate-950 text-white border border-slate-900 flex flex-col justify-between overflow-hidden shadow-lg shadow-slate-950/20">
             {/* Grid background effect */}
             <div className="absolute inset-0 bg-[radial-gradient(#ffffff04_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
@@ -69,43 +75,43 @@ export default function WhyChooseUs() {
             
             <div className="relative z-10">
               <div className="inline-flex p-3 rounded-xl bg-brand-teal/10 text-brand-orange border border-brand-teal/20 mb-6">
-                <CheckSquare className="w-6 h-6" />
+                <Compass className="w-6 h-6" />
               </div>
               <h3 className="font-display font-extrabold text-2xl mb-3 text-white">
-                {points[1].title}
+                {points[0].title}
               </h3>
               <p className="font-sans text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
-                {points[1].desc} Our rigorous standards ensure we validate candidate suitability across cognitive metrics, domain experience, culture-fit variables, and leadership goals.
+                {points[0].desc} Early talent shapes culture, defines operational speed, and lays the groundwork for all future scale.
               </p>
             </div>
 
             <div className="relative z-10 flex gap-6 mt-10 pt-6 border-t border-slate-900 text-xs font-mono text-slate-400">
-              <span>● COGNITIVE PROFILES</span>
-              <span>● PEER-VETTED CHECKS</span>
               <span>● CULTURE PLOT</span>
+              <span>● EXECUTION ALIGNMENT</span>
+              <span>● COGNITIVE FIT</span>
             </div>
           </div>
 
-          {/* Card 2: standard sized point */}
+          {/* Card 2: Boutique Search */}
           <div className="group relative p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
             <div>
               <div className="inline-flex p-3 rounded-xl bg-brand-teal/5 border border-brand-teal/10 text-brand-teal mb-6 group-hover:bg-brand-teal group-hover:text-white transition-all">
-                <BookOpen className="w-5 h-5" />
+                <Sliders className="w-5 h-5" />
               </div>
               <h3 className="font-display font-bold text-lg text-slate-900 mb-2">
-                {points[0].title}
+                {points[1].title}
               </h3>
               <p className="font-sans text-sm text-slate-600 leading-relaxed">
-                {points[0].desc}
+                {points[1].desc}
               </p>
             </div>
           </div>
 
-          {/* Card 3: Standard sized point */}
+          {/* Card 3: Strategic Candidate Positioning */}
           <div className="group relative p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
             <div>
               <div className="inline-flex p-3 rounded-xl bg-brand-orange/5 border border-brand-orange/10 text-brand-orange mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
-                <Zap className="w-5 h-5" />
+                <Users2 className="w-5 h-5" />
               </div>
               <h3 className="font-display font-bold text-lg text-slate-900 mb-2">
                 {points[2].title}
@@ -116,11 +122,11 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* Card 4: Standard sized point */}
+          {/* Card 4: Quality Over Quantity */}
           <div className="group relative p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
             <div>
               <div className="inline-flex p-3 rounded-xl bg-brand-teal/5 border border-brand-teal/10 text-brand-teal mb-6 group-hover:bg-brand-teal group-hover:text-white transition-all">
-                <Sliders className="w-5 h-5" />
+                <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="font-display font-bold text-lg text-slate-900 mb-2">
                 {points[3].title}
@@ -131,7 +137,7 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* Card 5: Larger / featured item item 5 */}
+          {/* Card 5: Relationship-Driven Partnerships */}
           <div className="lg:col-span-2 group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between hover:shadow-md transition-all">
             <div className="absolute -top-12 -right-12 w-48 h-48 bg-brand-orange/5 rounded-full filter blur-2xl pointer-events-none" />
             
@@ -143,16 +149,16 @@ export default function WhyChooseUs() {
                 {points[4].title}
               </h3>
               <p className="font-sans text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
-                {points[4].desc} We partner for the long haul. Our relationship metrics ensure candidate integration support continuous follow-ups, and long-term advisory assistance.
+                {points[4].desc} We don't measure success by invoices sent, but by the business impact created by our placements as they elevate your organizational capabilities over the long term.
               </p>
             </div>
 
             <div className="flex gap-4 mt-8 pt-6 border-t border-slate-200/60 text-xs font-semibold text-slate-500">
               <span className="flex items-center gap-1">
-                ✔ Executive Advisory
+                ✔ High-Touch Collaboration
               </span>
               <span className="flex items-center gap-1">
-                ✔ Candidate Nurtures
+                ✔ Talent Advisory Integrations
               </span>
             </div>
           </div>

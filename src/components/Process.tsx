@@ -1,46 +1,62 @@
 import React from 'react';
-import { Target, Search, Sparkles, Calendar, HeartHandshake } from 'lucide-react';
+import { Target, Sliders, Search, CheckSquare, Award, HeartHandshake, Sparkles } from 'lucide-react';
 
 export default function Process() {
   const steps = [
     {
       step: 1,
-      title: 'Understanding Your Requirements',
-      desc: 'We take the time to understand your business goals, team structure, and hiring needs.',
-      details: 'We form a unique search footprint detailing both hard-skill prerequisites and soft organizational factors.',
+      title: 'Discover',
+      desc: 'Deep dive into your business, vision, culture, and long-term milestones.',
+      details: 'We go beyond standard JD parameters to understand the strategic and cultural alignment needed for the role.',
       icon: Target,
       color: 'bg-brand-teal text-white'
     },
     {
       step: 2,
-      title: 'Talent Sourcing',
-      desc: 'We identify and engage qualified candidates through targeted sourcing strategies.',
-      details: 'Our networks and domain lists ensure we tap active talent pipelines as well as passive, non-applicant stars.',
-      icon: Search,
+      title: 'Design',
+      desc: 'Architecting the search strategy, defining the ideal candidate persona, and mapping the target ecosystem.',
+      details: 'We define role responsibilities, compensation benchmarks, and position the opportunity strategically to attract passive top-tier talent.',
+      icon: Sliders,
       color: 'bg-brand-orange text-white'
     },
     {
       step: 3,
-      title: 'Screening & Evaluation',
-      desc: 'Candidates undergo thorough assessment based on skills, experience, and role suitability.',
-      details: 'Evaluations check logical performance, specific framework proficiency, past deliverables, and alignment.',
-      icon: Sparkles,
+      title: 'Search',
+      desc: 'Executing a focused, multi-channel boutique search across hand-picked talent pools.',
+      details: 'We proactively engage exceptional passive candidates who aren\'t on job boards, leveraging our exclusive, trusted relationships.',
+      icon: Search,
       color: 'bg-brand-teal text-white'
     },
     {
       step: 4,
-      title: 'Interview Coordination',
-      desc: 'We manage the interview process and ensure seamless communication between clients and candidates.',
-      details: 'We act as liaison officers, arranging dates, preparing participants, and compiling detailed loops.',
-      icon: Calendar,
+      title: 'Assess',
+      desc: 'Conducting rigorous talent assessments to evaluate capabilities, leadership philosophies, and values.',
+      details: 'We evaluate behavioral indices, cultural adaptability, and core capability markers to ensure a perfect fit for your stage of growth.',
+      icon: CheckSquare,
       color: 'bg-brand-orange text-white'
     },
     {
       step: 5,
-      title: 'Offer & Joining Support',
-      desc: 'From offer rollout to onboarding, we assist throughout the hiring journey.',
-      details: 'Our recruiters remain actively involved to manage negotiations, mitigate notice-period drop-offs, and ensure seamless entry.',
+      title: 'Present',
+      desc: 'Delivering a highly curated, qualified shortlist with detailed search insights.',
+      details: 'We introduce only 2-3 standout profiles with comprehensive assessment notes, saving you valuable leadership hours.',
+      icon: Award,
+      color: 'bg-brand-teal text-white'
+    },
+    {
+      step: 6,
+      title: 'Close',
+      desc: 'Managing final stage alignment, compensation negotiation, and official offer sign-off.',
+      details: 'We act as a trusted intermediary, facilitating transparent communication to establish a solid foundation from day one.',
       icon: HeartHandshake,
+      color: 'bg-brand-orange text-white'
+    },
+    {
+      step: 7,
+      title: 'Beyond Joining',
+      desc: 'Facilitating a smooth transition and continuous alignment check-ins post-onboarding.',
+      details: 'We maintain close contact with both the hire and your leadership team to support successful assimilation and long-term retention.',
+      icon: Sparkles,
       color: 'bg-brand-teal text-white'
     }
   ];
@@ -52,13 +68,13 @@ export default function Process() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="font-sans font-bold text-xs tracking-widest text-[#f37a1b] uppercase">
-            OUR PIPELINE METHODOLOGY
+            Our Hiring Framework
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-none mt-3 mb-4">
-            How We Deliver Exceptional Quality At Speed
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug mt-3 mb-4">
+            A Structured Process. Tailored Execution.
           </h2>
           <p className="font-sans text-base sm:text-lg text-slate-600 leading-relaxed">
-            Our strategic recruiting pipeline guarantees minimal friction, maximum candidate retention, and consistent alignment with company timelines.
+            Our strategic hiring framework guarantees minimal friction, maximum talent retention, and consistent alignment with your growth timeline.
           </p>
         </div>
 
