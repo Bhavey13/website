@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 text-white border-t border-slate-900 pt-16 pb-8">
+    <footer className="bg-slate-900 text-white border-t border-slate-900 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-slate-900">
@@ -48,8 +48,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#f37a1b]" />
-                <a href="tel:+918123165815" className="text-white hover:text-brand-orange hover:underline transition-all font-mono">
-                  +91 81231 65815
+                <a href="tel:+918660405328" className="text-white hover:text-brand-orange hover:underline transition-all font-mono">
+                  +91 86604 05328
                 </a>
               </div>
             </div>
